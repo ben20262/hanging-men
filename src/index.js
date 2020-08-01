@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+//import { createStore, Provider } from 'redux'
 import './index.css';
 import App from './App';
+// import hangingReducer from '..reducers/index.js'
 import * as serviceWorker from './serviceWorker';
+
+//const store = createStore(hangingReducer)
 
 ReactDOM.render(
   <React.StrictMode>
