@@ -2,28 +2,30 @@ import React, {Component} from 'react'
 
 class Form extends Component {
 
-    constructor() {
-        state = {
-            words: ''
-        }
+    state = {
+        words: []
     }
 
     handleChange = event => {
-        this.setState(() => {
+        this.setState({
             words: event.target.value
         })
     }
 
-    handleSubmit = () => {
-
+    handleSubmit = event => {
+        event.preventDefault()
+        console.log(this.state.words)
     }
 
     render() {
-        <form>
-            <p>Enter the words you would like to play with seperated with a comma.</p>
-            <input type='text' onChange={this.handleChange}></input>
-            <input type='submit' onSubmit={this.handleSubmit}></input>
-        </form>
+        return (
+            <form onSubmit={this.handleSubmit} >
+                <p>Enter the words you would like to play with seperated with a comma.</p>
+                <textarea onChange={this.handleChange} />
+                <br />
+                <input type='submit' />
+            </form>
+        )
     }
 }
 
