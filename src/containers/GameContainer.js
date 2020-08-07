@@ -4,9 +4,11 @@ import Games from '../components/game/Games'
 class GameContainer extends Component {
 
     render() {
-        <div className='Game-Container'>
+        return (
+            <div className='Game-Container'>
 
-        </div>
+            </div>
+        )
     }
 
 }
