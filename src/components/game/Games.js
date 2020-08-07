@@ -4,7 +4,7 @@ import Game from './Game'
 const Games = props => {
 
     return (
-        <div>
+        <div className='Games-Component'>
             
         </div>
     )
