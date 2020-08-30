@@ -2,8 +2,8 @@ import React from 'react'
 
 const Letter = props => {
     return (
-        <button>
-
+        <button onClick={props.handleClick(props.letter)}>
+            {props.letter}
         </button>
     )
 }
