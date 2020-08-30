@@ -9,9 +9,9 @@ import * as serviceWorker from './serviceWorker';
 const store = createStore(hangingReducer)
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
