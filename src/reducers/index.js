@@ -1,4 +1,4 @@
-const hangingReducer = (state = {words: []}, action) => {
+export default function hangingReducer(state = {words: []}, action) {
     switch(action.type) {
         case 'ADD_WORDS':
             return {
