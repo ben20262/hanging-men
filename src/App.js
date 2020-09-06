@@ -1,11 +1,13 @@
 import React from 'react';
-import Form from './components/form/Form'
+import FormContainer from './containers/FormContainer'
+import GameContainer from './containers/GameContainer'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Form />
+      <FormContainer />
+      <GameContainer />
     </div>
   );
 }
