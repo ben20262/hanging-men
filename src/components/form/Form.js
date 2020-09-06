@@ -14,7 +14,7 @@ class Form extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
-        console.log(this.state.words)
+        this.props.addWords(this.state.words)
     }
 
     render() {
