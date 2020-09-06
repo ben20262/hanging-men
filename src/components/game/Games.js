@@ -5,7 +5,7 @@ const Games = props => {
 
     return (
         <div className='Games-Component'>
-            
+            {props.words}
         </div>
     )
 }
