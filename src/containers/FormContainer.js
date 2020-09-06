@@ -1,26 +1,29 @@
 import React, {Component} from 'react'
-import { addWords } from '../actions/index'
 import { connect } from 'react-redux'
+import { addWords } from '../actions/index'
+import Form from '../components/form/Form'
 
 class FormContainer extends Component {
 
     render() {
-        <div className='FormContainer'>
-            FormContainer
+        return (
+        <div id='FormContainer'>
+            <Form addWords={this.props.addWords}/>
         </div>
+        )
     }
 
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = () => {
     return {
-        words: state.words
+        
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        addWords: dispatch(addWords)
+        addWords: words => dispatch(addWords(words))
     }
 }
 
