@@ -1,0 +1,16 @@
+.hidden {
+    visibility: hidden;
+}
+
+.intangible {
+    display: none;
+}
+
+.Letters button {
+    border: 0px;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    margin: 5px;
+    background-color: rgb(166, 175, 255);
+}
