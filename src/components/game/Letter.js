@@ -2,7 +2,7 @@ import React from 'react'
 
 const Letter = props => {
     return (
-        <button onClick={props.handleClick(props.letter)}>
+        <button onClick={event => props.handleClick(event, props.letter)}>
             {props.letter}
         </button>
     )
