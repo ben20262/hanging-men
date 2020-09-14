@@ -1,18 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Letter from './Letter'
  
-class Letters extends Component {
-    
-    handleClick = letter => {
-        console.log(letter)
-    }
-    
-    render() { 
-        return (
-            <div>
-                
-            </div>
-        );
-    }
+let startLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
+
+const Letters = props => {
+    return (
+        <div className='Letters'>
+            {startLetters.map(letter => <Letter key={letter} letter={letter} handleClick={props.handleClick} />)}
+        </div>
+    );
 }
  
 export default Letters;
