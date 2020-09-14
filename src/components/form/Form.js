@@ -14,6 +14,7 @@ class Form extends Component {
 
     handleSubmit = event => {
         event.preventDefault()
+        event.target.className = 'intangible'
         this.props.addWords(this.state.words)
     }
 
