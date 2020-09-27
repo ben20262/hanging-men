@@ -1,9 +1,16 @@
-export default function hangingReducer(state = {words: []}, action) {
+export default function hangingReducer(state = {words: [], number: 26}, action) {
     switch(action.type) {
         case 'ADD_WORDS':
+            let wordHash = action.words.map((word, index) => {
+                return {
+                    word,
+                    hint: action.hints[index]
+                }
+            })
             return {
                 ...state,
-                words: action.words
+                words: wordHash,
+                number: action.number
             }
         case 'LETTER_CLICK':
             return {
