@@ -5,7 +5,7 @@ const Games = props => {
 
     return (
         <div className='Games-Component'>
-            {props.words.map(word => <Game key={word} word={word} />)}
+            {props.words.map(word => <Game key={word.word} word={word} number={props.number} />)}
         </div>
     )
 }
