@@ -1,9 +1,13 @@
-export const addWords = wordString => {
-    let words = wordString.split(', ')
+export const addWords = wordHash => {
+    let words = wordHash.words.split(', ')
+    let hints = wordHash.hints.split(', ')
+    let number = Number(wordHash.number) > 26 ? 26 : Number(wordHash.number)
     return dispatch => {
         dispatch({
             type: 'ADD_WORDS',
-            words
+            words,
+            number,
+            hints
         })
     }
 }
