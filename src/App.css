@@ -2,8 +2,16 @@
     visibility: hidden;
 }
 
+.visible {
+    visibility: visible;
+}
+
 .intangible {
     display: none;
+}
+
+img#Hint {
+    width: 250px;
 }
 
 .Letters button {
@@ -13,4 +21,19 @@
     border-radius: 3px;
     margin: 5px;
     background-color: rgb(166, 175, 255);
+}
+
+.Letters button[disabled] {
+    background-color: grey;
+}
+
+.Game {
+    border: solid;
+    margin-bottom: 3px;
+    
+}
+
+h2.Word {
+    position: relative;
+    left: 40%;
 }
