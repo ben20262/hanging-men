@@ -7,7 +7,7 @@ class GameContainer extends Component {
     render() {
         return (
             <div id='Game-Container'>
-                <Games words={this.props.words} />
+                <Games words={this.props.words} number={this.props.number}/>
             </div>
         )
     }
@@ -16,7 +16,8 @@ class GameContainer extends Component {
 
 const mapStateToProps = state => {
     return {
-        words: state.words
+        words: state.words,
+        number: state.number
     }
 }
 
