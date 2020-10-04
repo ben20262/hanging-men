@@ -3,9 +3,9 @@ import React, {Component} from 'react'
 class Form extends Component {
 
     state = {
-        words: [],
+        words: '',
         number: 26,
-        hints: []
+        hints: ''
     }
 
     handleChange = event => {
