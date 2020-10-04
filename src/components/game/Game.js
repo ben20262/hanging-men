@@ -11,14 +11,37 @@ import Hang_6 from '../../images/Hang_6.png'
 import Hang_7 from '../../images/Hang_7.png'
 
 const hangArray = [Hang, Hang_1, Hang_2, Hang_3, Hang_4, Hang_5, Hang_6, Hang_7]
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')
 
 class Game extends Component {
 
-    state = {
-        hiddenWord: this.props.word.word.split('').map(() => '_ '),
-        word: this.props.word.word.toUpperCase().split(''),
-        count: 0,
-        win: false
+    constructor(props) {
+        super()
+        console.log(props)
+
+        let word = props.word.word.toUpperCase().split('')
+        let hiddenWord = props.word.word.split('').map(() => '_ ')
+
+        let startLetters = letters
+        let letterNumber = props.number + props.word.word.length
+        let letterArray = props.word.word.split('')
+        for ( var i = props.word.word.length; i <= letterNumber; i ) {
+            let letterIndex = Math.floor(Math.random() * startLetters.length)
+            let newLetter = startLetters[letterIndex]
+            if (!letterArray.includes(newLetter)) {
+                letterArray.push(newLetter)
+                i++
+            }
+            console.log(letterArray)
+            startLetters.slice(letterIndex, letterIndex + 1)
+        }
+        this.state = {
+            hiddenWord,
+            word,
+            count: 0,
+            win: false,
+            letterArray
+        }
     }
 
     handleClick = (event, letter) => {
@@ -82,7 +105,7 @@ class Game extends Component {
                 {hangImage}
                 {hintImage}
                 <h2 className='Word'>{this.state.hiddenWord}</h2>
-                <Letters handleClick={this.handleClick} number={this.props.number} word={this.state.word} />
+                <Letters handleClick={this.handleClick} number={this.props.number} word={this.state.word} letterArray={this.state.letterArray} />
             </div>
         )
     }
