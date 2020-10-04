@@ -3,10 +3,7 @@ import React from 'react'
 const Letter = props => {
 
     let letterBool = (props.letterArray.includes(props.letter)) ? false : true
-
     let letterButton
-    
-    console.log(props)
 
     if (letterBool) {
         letterButton = <button onClick={event => props.handleClick(event, props.letter)} disabled={true} >
